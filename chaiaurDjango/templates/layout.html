@@ -1,0 +1,22 @@
+{% comment %} {% load static %} {% endcomment %}
+
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=load, initial-scale=1.0">
+    <title>
+        {% block title %}
+            Ovewritable Title
+        {% endblock %}
+    </title>
+    <link rel='stylesheet' href="{% static 'static.css' %}">
+</head>
+<body>
+    <nav> OUR Navbar </nav>
+    {% block content %}{% endblock %}
+
+{% tailwind_css %}
+</body>
+</html>
